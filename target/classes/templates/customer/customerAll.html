@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Tienda Keyrus</title>
+</head>
+<body>
+<div align="center">
+<h1>Lista de Clientes</h1>
+
+<table>
+    <tr>
+        <th> Codigo</th>
+        <th> Nombre</th>
+        <th> Descripcion</th>
+    </tr>
+    <tr th:each="customer : ${customers}">
+        <td th:utext="${customer.id}"/>
+        <td th:utext="${customer.customerName}" />
+        <td th:utext="${customer.description}"/>
+
+        <td>
+            <a th:href="@{/customer/customerDetail(id=${customer.id})}">Detalle</a>
+        </td>
+    </tr>
+</table>
+</div>
+</body>
+</html>

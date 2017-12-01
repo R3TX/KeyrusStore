@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Tienda Keyrus</title>
+</head>
+<body>
+<div align="center">
+    <table>
+        <tr>
+            <td>
+                <h1>Tienda Keyrus</h1>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Bienvenido a la tienda keyrus, aca podra encontrar todo lo que desee
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a th:href="@{/product/pIndex}">Productos</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a th:href="@{/order/oIndex}">Ordenes</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a th:href="@{/customer/cIndex}">Clientes</a>
+            </td>
+        </tr>
+    </table>
+    </div>
+</body>
+</html>

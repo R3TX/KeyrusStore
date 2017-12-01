@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Tienda Keyrus</title>
+</head>
+<body >
+<div align="center" >
+    <table>
+        <tr>
+            <td>
+               <h1>Clientes</h1>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a th:href="@{/customerAll}">Lista de Clientes</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a th:href="@{/newCustomer}">Nuevo Cliente</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                    Codigo:
+                </td>
+                <td>
+                    <input th:type="text" id="codigo"/>
+                </td>
+                 <td>
+                     <a href="javascript:var Codigo = document.getElementById('codigo').value; window.location = 'customerDetail?id=' + Codigo;">Buscar</a>
+                </td>
+
+        </tr>
+    </table>
+</div>
+</body>
+</html>

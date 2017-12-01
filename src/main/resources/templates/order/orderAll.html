@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Tienda Keyrus</title>
+</head>
+<body>
+<div align="center">
+<h1>Lista de ordenes</h1>
+
+<table>
+    <tr>
+        <th> Codigo</th>
+        <th> Nombre</th>
+        <th> Descripcion</th>
+    </tr>
+    <tr th:each="order : ${orders}">
+        <td th:utext="${order.id}"/>
+        <td th:utext="${order.orderName}" />
+        <td th:utext="${order.description}"/>
+
+        <td>
+            <a th:href="@{/order/orderDetail(id=${order.id})}">Detalle</a>
+        </td>
+    </tr>
+</table>
+</div>
+</body>
+</html>

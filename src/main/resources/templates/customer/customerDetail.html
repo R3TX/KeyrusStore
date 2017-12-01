@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Tienda Keyrus</title>
+</head>
+<body>
+<div align="center">
+<h1> <span th:text="|Cliente ${customer.customerName}|"/> </h1>
+<table >
+    <tr>
+        <td>
+            Codigo:
+        </td>
+        <td th:utext="${customer.id}">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Nombre:
+        </td>
+        <td th:utext="${customer.customerName}">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Descripcion:
+        </td>
+        <td th:utext="${customer.description}">
+        </td>
+
+    </tr>
+    <tr>
+        <td>
+            <a th:href="@{/modifyCustomer(id=${customer.id})}">Modificar</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <form th:action="@{/customer/all}"  th:method="DELETE">
+                <input type="hidden" th:field="${customer.id}"/>
+                <input type="hidden" th:field="${customer.customerName}"/>
+                <input type="hidden" th:field="${customer.description}"/>
+                <input type="submit" th:value="Eliminar"/>
+            </form>
+        </td>
+
+    </tr>
+</table>
+</div>
+</body>
+</html>

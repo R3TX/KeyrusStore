@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Tienda Keyrus</title>
+</head>
+<body>
+<div align="center">
+    <h1> <span th:text="|Nuevo Cliente|"/> </h1>
+
+    <form th:action="@{/customer/all}" th:object="${customer}" th:method="POST">
+        <table>
+            <tr>
+                <td>
+                    Nombre:
+                </td>
+                <td>
+                    <input type="text" th:field="*{customerName}"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Descripcion:
+                </td>
+                <td >
+                    <input type="text" th:field="*{description}"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" th:value="Guardar"/>
+                </td>
+            </tr>
+
+
+        </table>
+
+    </form>
+
+</div>
+
+</body>
+</html>
